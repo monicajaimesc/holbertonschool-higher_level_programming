@@ -3,7 +3,7 @@ if __name__ == "__main__":
     import sys
     a = len(sys.argv)
     if a == 1:
-        print("{:d} arguments".format(a - 1))
+        print("{:d} arguments.".format(a - 1))
     elif a == 2:
         print("{:d} argument:".format(a - 1))
         print("{:d}: {:s}".format(a - 1, sys.argv[1]))
