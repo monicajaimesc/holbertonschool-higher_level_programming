@@ -4,7 +4,6 @@ def replace_in_list(my_list, idx, element):
         return my_list
     if idx >= len(my_list):
         return my_list
-    for i in my_list:
-        if idx == i:
-            my_list[idx] = element
+    # not need for, there is already an index
+    my_list[idx] = element
     return my_list
