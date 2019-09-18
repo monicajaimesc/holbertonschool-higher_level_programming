@@ -8,4 +8,5 @@ def divisible_by_2(my_list=[]):
             copy_list[counter] = True
         else:
             copy_list[counter] = False
+        counter = counter + 1
     return copy_list
