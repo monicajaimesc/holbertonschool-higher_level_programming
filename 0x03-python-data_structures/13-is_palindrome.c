@@ -25,10 +25,9 @@ int is_palindrome(listint_t **head)
 
 		while (temp)
 		{
-			buffer[counter] = temp->n;
+			buffer[i] = temp->n;
 			temp = temp->next;
 			i++;
-			counter++;
 
 		}
 
@@ -37,7 +36,7 @@ int is_palindrome(listint_t **head)
 		while (j <= counter)
 		{
 
-			if (buffer[i] != buffer[j])
+			if (buffer[counter] != buffer[j])
 			counter--;
 			j++;
 		}
