@@ -37,6 +37,7 @@ int is_palindrome(listint_t **head)
 		{
 
 			if (buffer[counter] != buffer[j])
+				return (0);
 			counter--;
 			j++;
 		}
