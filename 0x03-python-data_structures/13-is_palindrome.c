@@ -26,9 +26,8 @@ int is_palindrome(listint_t **head)
 		while (temp)
 		{
 			buffer[i] = temp->n;
-			temp = temp->next;
 			i++;
-
+			temp = temp->next;
 		}
 
 		counter = counter - 1;
