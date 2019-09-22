@@ -20,24 +20,25 @@ int is_palindrome(listint_t **head)
 		if (*head == NULL)
 			return (1);
 
-		if (temp->next == NULL)
+		if (!(*head)->next)
 			return (1);
 
 		while (temp)
 		{
-			buffer[i] = temp->n;
-			i++;
+			buffer[counter] = temp->n;
 			temp = temp->next;
+			i++;
+			counter++;
 		}
 
-		counter = counter - 1;
+		i = counter - 1;
 
-		while (j <= counter)
+		while (j <= i)
 		{
 
-			if (buffer[counter] != buffer[j])
+			if (buffer[i] != buffer[j])
 				return (0);
-			counter--;
+			i--;
 			j++;
 		}
 		return (1);
