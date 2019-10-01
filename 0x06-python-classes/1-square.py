@@ -6,7 +6,7 @@ Square Module - for all your needs, as long as they include printing squares
 
 class Square:
     """
-    Square class: was created
+    Square class: was created it 
     """
     def __init__(self, size=0):
         """
