@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 Square Module - for all your needs, as long as they include printing squares
 """
