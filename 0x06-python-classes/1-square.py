@@ -10,6 +10,9 @@ class Square:
     """
     def __init__(self, size):
         """
-        instance attribute: size (created), invoke with self
+        instance attribute: size (created)
         """
         self.__size = size
+        """
+        when it's created, then it's invoke it
+        """
