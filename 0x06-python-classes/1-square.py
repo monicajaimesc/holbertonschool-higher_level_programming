@@ -13,6 +13,3 @@ class Square:
         instance attribute: size (created it)
         """
         self.__size = size
-        """
-        when it's created, then it's invoke it
-        """
