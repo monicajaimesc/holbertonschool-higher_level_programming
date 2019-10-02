@@ -17,7 +17,7 @@ class Square:
         """
         self.size = size
         self.position = position
-    
+
     @property
     # Private instance attribute: size:
     def size(self):
@@ -25,7 +25,7 @@ class Square:
         Getter for the size of the square
         """
         return (self.__size)
-    
+
     @size.setter
     def size(self, value):
         """
@@ -33,7 +33,7 @@ class Square:
         """
         self.__check_size__(value)
         self.__size = value
-    
+
     # Private instance attribute: position:
     @property
     def position(self):
@@ -41,15 +41,15 @@ class Square:
         Getter for the size of ya square
         """
         return (self.__position)
-   
-   # property setter def position(self, value)
+
+    # property setter def position(self, value)
     @position.setter
     def position(self, value):
         """
         Setter for square position
         where your square is
         """
-        # to set it: 
+        # to set it:
         # size must be an integer
         self.__check_pos__(value)
         # size is less than 0
@@ -76,19 +76,18 @@ class Square:
                         print("#")
                         break
                     print("#", end="")
-    
+
     # create a new attribute in python
     def __check_pos__(self, position):
         """
         Error checking for a square position
         position must be a tuple of 2 positive integers
         """
-        if (type(position) != tuple or len(position) != 2 or 
+        if (type(position) != tuple or len(position) != 2 or
             type(position[0]) != int or type(position[1]) != int or
                 position[0] < 0 or position[1] < 0):
+            # otherwise, raise a TypeError
             raise TypeError("position must be a tuple of 2 positive integers")
-
-        # otherwise raise a TypeError exception with the message position must be a tuple of 2 positive integers
 
     def __check_size__(self, size):
         """
