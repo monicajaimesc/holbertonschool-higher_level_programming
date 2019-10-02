@@ -68,12 +68,16 @@ class Square:
         Prints the square! Should only print a newline if size is 0.
         Now includes the position to print them at.
         """
-        if (self.__size == 0):
-            print("")
+        if self.__size == 0:
+            print()
         else:
-            for i in range(self.size):
-                for j in range(self.size):
-                    if j == (self.size - 1):
+            for i in range(self.__position[1]):
+                print()
+            for j in range(self.__size):
+                for h in range(self.__position[0]):
+                    print(" ", end="")
+                for k in range(self.__size):
+                    if k == (self.size - 1):
                         print("#")
                         break
                     print("#", end="")
