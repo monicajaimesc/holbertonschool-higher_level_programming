@@ -66,6 +66,7 @@ class Square:
     def my_print(self):
         """
         Prints the square! Should only print a newline if size is 0.
+        Now includes the position to print them at.
         """
         if (self.__size == 0):
             print("")
