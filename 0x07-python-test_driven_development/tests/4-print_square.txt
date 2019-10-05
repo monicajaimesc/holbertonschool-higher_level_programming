@@ -1,0 +1,51 @@
+==============================
+How to use 4-print_square.py
+==============================
+
+1) Import file
+>>> print_square = __import__('4-print_square').print_square
+
+2) Print a square with 4 * 4 "#"
+>>> print_square(4)
+####
+####
+####
+####
+
+3) Print the empty line
+>>> print_square(0)
+
+4) print one per one #
+
+>>> print_square(1)
+#
+
+5) size cant be negative
+
+>>> print_square(-1)
+Traceback (most recent call last):
+	  ...
+ValueError: size must be >= 0
+
+6) Square cant be a string
+
+>>> print_square("string")
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
+
+7) square has to print something
+>>> print_square(None)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
+
+8) boolean test for simbol #
+>>> print_square(True)
+#
+
+9) sizze cant be negative and fille it with "0"
+>>> print_square(-1.0)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
