@@ -2,18 +2,28 @@
 How to use 0-add_integer.py
 ==========================
     
-1) Import File 
+Import module 
 >>> add_integer = __import__('0-add_integer').add_integer
     
-2) addition   
+Addition   
 >>> add_integer(1, 2)
 3
 
-3) float
+Addition with b=98
+>>> add_integer(2)
+100
+
+>>> add_integer(100, -2)
+98
+
+Float
 >>> add_integer(10.0, 3)
 13
 
-4) a Must be an integer
+>>> add_integer(100.3, -2)
+98
+
+Must be an integer
 
 >>> add_integer("hi", 2)
 Traceback (most recent call last):
@@ -32,15 +42,14 @@ Traceback (most recent call last):
         ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
-
-7) b is 98
+b is 98
 >>> add_integer(10)
 108
 
-8) float
+float
 >>> add_integer(1234.5, 1)
 1235
 
-9) integer bytes
+integer bytes
 >>> add_integer(1000000000000000, 10)
 1000000000000010
