@@ -1,0 +1,46 @@
+==========================
+How to use 0-add_integer.py
+==========================
+    
+1) Import File 
+>>> add_integer = __import__('0-add_integer').add_integer
+    
+2) addition   
+>>> add_integer(1, 2)
+3
+
+3) float
+>>> add_integer(10.0, 3)
+13
+
+4) a Must be an integer
+
+>>> add_integer("hi", 2)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+
+5) b must be an integer
+>>> add_integer(2, "o")
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+
+6) None
+>>> add_integer()
+Traceback (most recent call last):
+        ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+7) b is 98
+>>> add_integer(10)
+108
+
+8) float
+>>> add_integer(1234.5, 1)
+1235
+
+9) integer bytes
+>>> add_integer(1000000000000000, 10)
+1000000000000010
