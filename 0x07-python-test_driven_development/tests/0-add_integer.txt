@@ -1,55 +1,87 @@
 ==========================
 How to use 0-add_integer.py
 ==========================
-    
-Import module 
->>> add_integer = __import__('0-add_integer').add_integer
-    
-Addition   
->>> add_integer(1, 2)
-3
 
-Addition with b=98
+Import function from module
+----------------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+
+Basic cases (intranet):
+-----------------------
+    
 >>> add_integer(2)
 100
+
+>>> add_integer(1, 2)
+3
 
 >>> add_integer(100, -2)
 98
 
-Float
->>> add_integer(10.0, 3)
-13
-
 >>> add_integer(100.3, -2)
 98
 
-Must be an integer
-
->>> add_integer("hi", 2)
+>>> add_integer(4, "School")
 Traceback (most recent call last):
-        ...
-TypeError: a must be an integer
-
-5) b must be an integer
->>> add_integer(2, "o")
-Traceback (most recent call last):
-        ...
 TypeError: b must be an integer
 
-6) None
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Edge cases:
+----------------
+
 >>> add_integer()
 Traceback (most recent call last):
-        ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
-b is 98
->>> add_integer(10)
-108
+>>> add_integer("unicorn")
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-float
->>> add_integer(1234.5, 1)
-1235
+>>> add_integer(5, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
 
-integer bytes
->>> add_integer(1000000000000000, 10)
-1000000000000010
+>>> add_integer(34, 54, 67)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+The result can't be a float
+>>> add_integer(2.5, 3.7)
+5
+
+The result can't be a float
+>>> add_integer(3.7)
+101
+
+>>> add_integer([1, 2, 3])
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer((1, 2, 3))
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer({"a": 1, "b": 2, "c": 3})
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+exception OverflowError
+    Raised when the result of an arithmetic operation is too large to 
+    be represented.
+
+>>> add_integer(float('-inf'), float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+
