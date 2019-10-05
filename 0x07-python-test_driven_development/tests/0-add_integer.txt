@@ -75,11 +75,14 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
-exception OverflowError
-    Raised when the result of an arithmetic operation is too large to 
-    be represented.
+exception OverflowError - Raised when the result of an arithmetic operation is too large to 
+be represented.
 
 >>> add_integer(float('-inf'), float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(100e1000, 1)
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
