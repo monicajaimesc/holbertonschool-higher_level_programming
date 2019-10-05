@@ -18,3 +18,8 @@ A high-level programming language is a programming language with strong abstract
 | [0x05-python-exceptions](0x05-python-exceptions) | exceptions |
 | [0x06-python-classes](0x06-python-classes) | classes |
 | [0x07-python-test_driven_development](0x07-python-test_driven_development) | Test Driven Development |
+
+
+## Author
+​
+[@lama6a](@lama6a)
