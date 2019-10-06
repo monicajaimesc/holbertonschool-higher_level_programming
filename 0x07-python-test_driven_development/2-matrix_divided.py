@@ -14,10 +14,10 @@ def matrix_divided(matrix, div):
     length = 0
 
     # Divides all elements of a matrix
-    if type(div) is not int and type(div) is not float:
-        raise TypeError('div must ibe a number')
+    if isinstance(div, int) is False and isinstance(div, float) is False:
+        raise TypeError('div must be a number')
     # Matrix must be a list of integers or floats, TypeError
-    if matrix == [] or matrix == [[]]:
+    if type(matrix) is not list:
         raise TypeError('matrix must be a matrix (list of lists) '
                         'of integers/floats')
     if not isinstance(matrix[0], list):
