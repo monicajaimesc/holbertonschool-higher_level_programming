@@ -12,8 +12,9 @@ def text_indentation(text):
     or at the end of each printed line.
     """
     # text is a string, otherwise raise a TypeError
-    if not isinstance(text, str):
+    if isinstance(text, str) is False:
         raise TypeError("text must be a string")
+
     # if text is None or not isinstance(text, str) or len(text) < 0:
     # raise TypeError('must be a string')
     # string.replace(old, new, count)
