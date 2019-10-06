@@ -24,5 +24,16 @@ def text_indentation(text):
     # to the line that was strip (for.,?)
     # loop text and split where "\n" is)
     # end =""no space output promp line)
-    string = ""
+    # there should be no spaces at the beginning
+    # and the end, line strip metodo
+    
     print("\n".join([line.strip() for line in text.split("\n")]), end="")
+
+    #if isinstance(text, str) is False:
+        #raise TypeError("text must be a string")
+    #delim = ":.?"
+    #for x in delim:
+        #text = text.replace(x, "{}\n\n".format(x))
+    #text = text.replace('\\', '')
+    #text = "\n".join([line.strip() for line in text.split('\n')])
+    #print(text, end="")
