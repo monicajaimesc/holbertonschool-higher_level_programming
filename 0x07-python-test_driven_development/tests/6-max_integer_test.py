@@ -1,22 +1,39 @@
 #!/usr/bin/python3
-"""Unittest for max_integer([..])
-"""
+""" Here is a short script to 
+test max_integer([..])"""
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+# A testcase is created by subclassing unittest.TestCase
 class TestMaxInteger(unittest.TestCase):
 
-    def test_max_int(self):
-        self.assertAlmostEqual(max_integer([1, 2, 3]), 3)
+    # All tests you make must be passable by the function below
+    # The unittest module provides tools for constructing and running tests
+    # test_ means it's a method
+    def test_upper(self):
+        self.assertEqual(max_integer([6, 7, 8, 9]), 9)
 
-    def test_list_str(self):
-        self.asserRaises(TypeError, max_integer([1, "unicorn", 58]))
+    def test_none(self):
+        self.assertEqual(max_integer([]), None)
 
-#In this task, you will write unittests for the function def max_integer(list=[]):.
+    def test_one(self):
+        self.assertEqual(max_integer([2]), 2)
 
-#Your test file should be inside a folder tests
-#You have to use the unittest module
-#Your test file should be python files (extension: .py)
-#Your test file should be executed by using this command: python3 -m unittest tests.6-max_integer_test
-#All tests you make must be passable by the function below
-#We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+    def test_one_neg(self):
+        self.assertEqual(max_integer([-10]), -10)
+
+    def test_neg(self):
+        self.assertEqual(max_integer([1, -2, -3, -4]), 1)
+
+    def test_middle(self):
+        self.assertEqual(max_integer([1, 3, 8, 2, 6]), 8)
+
+if __name__ == '__main__':
+    unittest.main()
+
+# The crux of each test is a call to assertEqual() to check 
+# for an expected result; assertTrue() or assertFalse() to verify a condition; 
+# or assertRaises() to verify that a specific exception gets raised. 
+# These methods are used instead of the assert statement so 
+# the test runner can accumulate all test results and produce a report.
