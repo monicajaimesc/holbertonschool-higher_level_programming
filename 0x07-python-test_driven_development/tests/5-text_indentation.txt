@@ -30,4 +30,6 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 Traceback (most recent call last):
 TypeError: text_indentation() takes 1 positional argument but 3 were given
 
-
+>>> text_indentation(19)
+Traceback (most recent call last):
+TypeError: must be a string
