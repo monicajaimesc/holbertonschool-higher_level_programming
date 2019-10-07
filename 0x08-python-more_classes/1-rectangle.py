@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Rectangle Module- For rectangular purposes only."""
+""" Rectangle Module- For rectangular purposes only """
 
 
 class Rectangle:
