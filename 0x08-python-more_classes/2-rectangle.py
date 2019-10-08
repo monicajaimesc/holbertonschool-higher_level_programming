@@ -39,6 +39,7 @@ class Rectangle:
         """ width getter """
         # Private instance attribute: height:
         return self.__height
+
     # property setter
     @height.setter
     def height(self, value):
