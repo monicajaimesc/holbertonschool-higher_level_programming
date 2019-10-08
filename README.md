@@ -18,6 +18,8 @@ A high-level programming language is a programming language with strong abstract
 | [0x05-python-exceptions](0x05-python-exceptions) | exceptions |
 | [0x06-python-classes](0x06-python-classes) | classes |
 | [0x07-python-test_driven_development](0x07-python-test_driven_development) | Test Driven Development |
+| [0x08-Python-More Classes and Objects](0x08-Python - More Classes and Objects) | More classes and objects |
+| [0x09. Python - Everything is object](0x09. Python - Everything is object) | Everithing is a object |
 
 
 ## Author
