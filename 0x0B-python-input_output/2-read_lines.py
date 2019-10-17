@@ -9,8 +9,8 @@ def read_lines(filename="", nb_lines=0):
     """
     return lines readed
     """
-    with open("my_file_0.txt", mode='r' , encoding="utf-8") as f: 
-    #  nb_lines is lower or equal to 0
+    with open("my_file_0.txt", mode='r', encoding="utf-8") as f:
+        #  nb_lines is lower or equal to 0
         if nb_lines <= 0:
             print(f.read())
         else:
