@@ -12,7 +12,5 @@ def read_file(filename=""):
     """
 
 
-with open("my_file_0.txt", mode='r', encoding="utf-8") as f:
-    read_data = f.read()
-print("{:s}".format(read_data), end="")
-f.closed
+    with open(filename, mode='r', encoding="utf-8") as f:
+        print(f.read(), end="")
