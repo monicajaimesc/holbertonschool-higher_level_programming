@@ -10,7 +10,5 @@ def read_file(filename=""):
     read_file: read a file using
     with statement
     """
-
-
-    with open(filename, mode='r', encoding="utf-8") as f:
+    with open(filename, 'r', encoding="utf-8") as f:
         print(f.read(), end="")
