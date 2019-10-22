@@ -15,7 +15,6 @@ class Rectangle(Base):
         """
         Initialize Class constructor
         """
-        # Private instance attributes
         self.width = width
         self.height = height
         self.x = x
@@ -156,10 +155,10 @@ class Rectangle(Base):
         Args:
             Kwargss: CAN BE! a double pointer to a dictionary: key/value
         """
-        #  kwargs is behavior in terms you’re already familiar wit
-        # **kwargs must be skipped if *args exists and is not empty
-        # args: non-keyworded variable length argument list to the funtion
         if args and len(args) > 0:
+            #  kwargs is behavior in terms you’re already familiar wit
+            # **kwargs must be skipped if *args exists and is not empty
+            # args: non-keyworded variable length argument list to the funtion
             for idx, arg in enumerate(args):
                 # enumerate: Return an enumerate object.
                 if idx == 0:
