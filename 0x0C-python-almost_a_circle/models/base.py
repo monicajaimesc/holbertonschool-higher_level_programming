@@ -127,5 +127,5 @@ class Base:
                 list_instance.append(cls.create(**d))
             return list_instance
         # If the file doesn’t exist, return an empty list
-        except FileNotFoundError:
+        except Exception:
             return []
