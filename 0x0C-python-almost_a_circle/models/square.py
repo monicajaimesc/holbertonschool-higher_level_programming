@@ -34,8 +34,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """Getter: get size of square
-        Return:
-        size of square
+        return: size of square
         """
 
         return self.width
@@ -83,5 +82,5 @@ class Square(Rectangle):
         """
         # attrs_list = ["id", "width", "height", "x", "y"]
         # return {key: getattr(self, key) for key in attrs_list}
-        return {'id': self.id, 'width': self.width, 'height': self.height,
-                'x': self.x, 'y': self.y}
+        return {'id': self.id, 'y': self.y, 'x': self.x,
+                'height': self.height, 'width': self.width}
