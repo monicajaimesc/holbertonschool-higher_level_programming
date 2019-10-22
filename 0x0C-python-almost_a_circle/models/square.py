@@ -60,6 +60,8 @@ class Square(Rectangle):
                     super(Rectangle, self).__init__(arg)
                 if idx == 1:
                     self.size = arg
+                if idx == 2:
+                    self.x = arg
                 if idx == 3:
                     self.y = arg
         elif kwargs and len(kwargs) > 0:
