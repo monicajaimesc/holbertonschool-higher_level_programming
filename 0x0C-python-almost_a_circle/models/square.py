@@ -68,8 +68,6 @@ class Square(Rectangle):
                     super(Rectangle, self).__init__(value)
                 if key == 'size':
                     self.size = value
-                if key == 'size':
-                    self.size = value
                 if key == 'x':
                     self.x = value
                 if key == 'y':
