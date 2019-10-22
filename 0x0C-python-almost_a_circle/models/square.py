@@ -20,6 +20,7 @@ class Square(Rectangle):
         # Call the super class, it'll use the logic
         # of the __init__ of the Rectangle
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """__str__ method: return a string
