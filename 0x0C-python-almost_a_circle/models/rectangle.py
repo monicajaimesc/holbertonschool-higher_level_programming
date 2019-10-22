@@ -35,6 +35,7 @@ class Rectangle(Base):
     # With a setter, you are able to validate
     # what a developer is trying to assign to a variable.
     # So after, in your class you can “trust” these attributes.
+
     @width.setter
     def width(self, value):
         """ setter: set the argument value to witdth
