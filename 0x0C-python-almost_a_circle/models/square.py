@@ -82,5 +82,4 @@ class Square(Rectangle):
         """
         # attrs_list = ["id", "width", "height", "x", "y"]
         # return {key: getattr(self, key) for key in attrs_list}
-        return {'id': self.id, 'y': self.y, 'x': self.x,
-                'height': self.height, 'width': self.width}
+        return {'id': self.id, 'y': self.y, 'x': self.x, 'size': self.size}
