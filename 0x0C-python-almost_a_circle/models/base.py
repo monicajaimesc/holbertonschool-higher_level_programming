@@ -108,24 +108,23 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load_from_file classmethod: File to instances
-        Args:
-            cls: the class itself
-        Return:
-            returns a list of instances
         """
-        # filename = <Class name>.json
-        filename = "{}.json".format(cls.__name__)
-        list_instance = []
-        # Otherwise,
-        # try to open in lecture mode
+        load_from_file - load the file and return a new list to exec
+        """
+        # Create the namefile
+        file_name = str(cls.__name__) + ".json"
+        # Try to open the file
         try:
-            with open(filename, mode='r', encoding='utf-8') as f:
-                list_dict = cls.from_json_string(f.read())
-            # create a list of instance and append to the file
-            for d in list_dict:
-                list_instance.append(cls.create(**d))
-            return list_instance
-        # If the file doesn’t exist, return an empty list
+            # Read the file
+            with open(file_name, mode="r", encoding="utf-8") as f:
+                # Create empty file
+                new_list = []
+                # Read the file
+                read_file = f.read()
+                new_file = cls.from_json_string(read_file)
+                for dic in new_file:
+                    new_inst = cls.create(**dic)
+                    new_list.append(new_inst)
+                return new_list
         except Exception:
             return []
