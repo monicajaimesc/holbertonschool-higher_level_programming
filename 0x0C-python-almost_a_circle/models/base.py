@@ -3,6 +3,7 @@
 Base module that contain the first class Base
 """
 import json
+import csv
 """import Json"""
 
 
@@ -131,3 +132,38 @@ class Base:
                 return list_instance
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        with open("{}.csv".format(cls.__name__), 'w') as f:
+            count = 0
+
+            if cls.__name__ == "Rectangle":
+                file_name = ["width", "height", "x", "y", "id"]
+                keys = {"width": "width", "height": "height",
+                        "x": "x", "y": "y", "id": "id"}
+            else:
+                file_name = ["size", "x", "y", "id"]
+                keys = {"size": "size", "x": "x", "y": "y", "id": "id"}
+
+            file_writer = csv.DictWriter(f, file_name=file_name)
+            for objeto in list_objs:
+                if count == 0:
+                    file_writer.writerow(keys)
+                    count += 1
+                file_writer.writerow(objeto.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        with open("{}.csv".format(cls.__name__), 'r') as f:
+            new_dict = {}
+            list_intstance = []
+
+            csv_reader = csv.DictReader(f)
+            for objeto in csv_reader:
+                for key, value in objeto.items():
+                    new_dict[key] = int(value)
+                inst = cls.create(**new_dict)
+                list_intstance.append(inst)
+
+            return list_intstance
