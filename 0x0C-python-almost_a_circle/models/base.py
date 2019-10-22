@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """
-Module that contain the first class Base
+Base module that contain the first class Base
 """
 import json
+"""import Json"""
 
 
 class Base:
@@ -14,7 +15,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """
+        """__init__ method:
         class constructor with its
         assign the public instance attribute id
         Args:
@@ -31,8 +32,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """"
-        static method to_json_string: Serialize obj to a JSON
+        """"to_json_string: Serialize obj to a JSON
         formatted str.
         Args:
             list_dictionaries: a list of dictionaries
