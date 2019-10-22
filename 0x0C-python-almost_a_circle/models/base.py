@@ -68,3 +68,40 @@ class Base:
                 # json_string returns the JSON string representation
                 # of list_dictionaries:
                 f.write(cls.to_json_string(list_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ from_json_string static method: Desearialize
+        JSON string to object
+        Args:
+            json_string: a string representing a list of
+            dictionaries
+        Return:
+        returns the list of the JSON string representation
+        json_string
+        """
+        # If json_string is None or empty, return an empty list
+        if json_string is None or len(json_string) == 0:
+            return []
+        # Decoding JSON:
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create classmethod: Dictionary to Instance
+        Args:
+            cls: the class itself
+            dictionary: LIKE A double pointer to a dictionary
+        Return:
+            returns an instance with all atributes
+            already set
+        """
+        # create a Rectangle instance with dummy attrubutes
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1, 1, 1)
+        if cls.__name__ == "Square":
+            dummy = cls(1, 1, 1)
+        # Call update instance method to this “dummy” instance
+        # to apply your real values
+        dummy.update(**dictionary)
+        return dummy
