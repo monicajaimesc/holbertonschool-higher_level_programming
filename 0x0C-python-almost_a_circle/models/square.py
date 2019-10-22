@@ -37,7 +37,7 @@ class Square(Rectangle):
         Return:
         size of square
         """
-        
+
         return self.width
 
     @size.setter
