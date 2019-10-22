@@ -57,7 +57,6 @@ class Square(Rectangle):
             for idx, arg in enumerate(args):
                 if idx == 0:
                     super(Rectangle, self).__init__(arg)
-                    # self.id == arg
                 if idx == 1:
                     self.size = arg
                 if idx == 3:
