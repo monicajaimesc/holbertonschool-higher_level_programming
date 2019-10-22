@@ -105,3 +105,27 @@ class Base:
         # to apply your real values
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """load_from_file classmethod: File to instances
+        Args:
+            cls: the class itself
+        Return:
+            returns a list of instances
+        """
+        # filename = <Class name>.json
+        filename = "{}.json".format(cls.__name__)
+        list_instance = []
+        # Otherwise,
+        # try to open in lecture mode
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                list_dict = cls.from_json_string(f.read())
+            # create a list of instance and append to the file
+            for d in list_dict:
+                list_instance.append(cls.create(**d))
+            return list_instance
+        # If the file doesn’t exist, return an empty list
+        except FileNotFoundError:
+            return []
