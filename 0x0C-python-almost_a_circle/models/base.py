@@ -108,8 +108,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """
-        load_from_file - load the file and return a new list to exec
+        """load_from_file classmethod: File to instances
+        Args:
+           cls: the class itself
+        Return:
+           returns a list of instances
         """
         # Create the namefile
         file_name = str(cls.__name__) + ".json"
@@ -118,13 +121,13 @@ class Base:
             # Read the file
             with open(file_name, mode="r", encoding="utf-8") as f:
                 # Create empty file
-                new_list = []
+                list_instance = []
                 # Read the file
                 read_file = f.read()
-                new_file = cls.from_json_string(read_file)
-                for dic in new_file:
+                list_dict = cls.from_json_string(read_file)
+                for dic in list_dict:
                     new_inst = cls.create(**dic)
-                    new_list.append(new_inst)
-                return new_list
-        except Exception:
+                    list_instance.append(new_inst)
+                return list_instance
+        except FileNotFoundError:
             return []
