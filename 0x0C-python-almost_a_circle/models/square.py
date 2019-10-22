@@ -35,8 +35,9 @@ class Square(Rectangle):
     def size(self):
         """Getter: get size of square
         Return:
-                size of square
+        size of square
         """
+        
         return self.width
 
     @size.setter
