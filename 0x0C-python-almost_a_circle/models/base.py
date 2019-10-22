@@ -98,9 +98,9 @@ class Base:
         """
         # create a Rectangle instance with dummy attrubutes
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1, 1, 1)
-        if cls.__name__ == "Square":
-            dummy = cls(1, 1, 1)
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
         # Call update instance method to this “dummy” instance
         # to apply your real values
         dummy.update(**dictionary)
