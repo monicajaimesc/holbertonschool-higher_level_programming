@@ -24,3 +24,7 @@ Data structures are basically just that - they are structures which can hold som
 | [11-delete_at.py](11-delete_at.py) | function that deletes the item at a specific position in a list  |
 | [12-switch.py](12-switch.py) | Complete the source code in order to switch value of a and b |
 | [13-is_palindrome.c](13-is_palindrome.c) | function in C that checks if a singly linked list is a palindrome.  |
+
+## Author
+
+[@lama6a](@lama6a)

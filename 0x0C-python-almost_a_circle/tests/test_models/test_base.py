@@ -60,12 +60,16 @@ class Test_base(unittest.TestCase):
 
     def test_to_json_string(self):
         """test to_json_string method"""
+        # If list_dictionaries is None or empty, return the string: "[]"
         Base._Base__nb_objects = 0
         r1 = Rectangle(10, 7, 2, 8)
+        # You can try to do json.loads(), which will throw a ValueError 
+        # if the string you pass can't be decoded as JSON.
         json_dict = Base.to_json_string([r1.to_dictionary()])
         self.assertEqual(type(json_dict), str)
         list_dict = json.loads(json_dict)
         list = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
+        # to check for an expected result;
         self.assertEqual(list_dict, list)
 
     def test_save_to_file_rectangle(self):

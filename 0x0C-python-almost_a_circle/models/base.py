@@ -4,6 +4,7 @@ Base module that contain the first class Base
 """
 import json
 import csv
+import turtle
 """import Json"""
 
 
@@ -146,7 +147,7 @@ class Base:
                 file_name = ["size", "x", "y", "id"]
                 keys = {"size": "size", "x": "x", "y": "y", "id": "id"}
 
-            file_writer = csv.DictWriter(f, file_name=file_name)
+            file_writer = csv.DictWriter(f, fieldnames=file_name)
             for objeto in list_objs:
                 if count == 0:
                     file_writer.writerow(keys)
@@ -167,3 +168,13 @@ class Base:
                 list_intstance.append(inst)
 
             return list_intstance
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        tur = turtle.Turtle()
+        tur.color('yellow')
+        tur.penzise(5)
+        tur
+
+        for i in list_rectangles:
+            tur.forward(i.x)

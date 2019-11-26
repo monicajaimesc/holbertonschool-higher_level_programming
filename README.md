@@ -10,7 +10,7 @@ A high-level programming language is a programming language with strong abstract
 
 | folder | Description |
 | ------ | ------ |
-| [0x00-python-hello_world](0x00-python-hello_world) | Basic operations in python  |
+| []() |  |
 | [0x01-python-if_else_loops_functions](0x01-python-if_else_loops_functions) | conditionals |
 | [0x02-python-import_modules](0x02-python-import_modules) | Import modules |
 | [0x03-python-data_structures](0x03-python-data_structures) |  Data structures|

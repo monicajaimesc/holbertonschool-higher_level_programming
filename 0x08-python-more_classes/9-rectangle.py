@@ -13,6 +13,8 @@ class Rectangle:
     # Instantiation
     def __init__(self, width=0, height=0):
         """ init """
+        # it has to be public if it's private don't
+        # go inside to the getter and setter the first time
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1

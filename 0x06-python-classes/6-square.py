@@ -25,12 +25,13 @@ class Square:
         Getter for the size of the square
         """
         return (self.__size)
-
+    # create the private variable
     @size.setter
     def size(self, value):
         """
         Setter for setting sqwar size.
         """
+        # calling the setter
         self.__check_size__(value)
         self.__size = value
 
