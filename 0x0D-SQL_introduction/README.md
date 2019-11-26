@@ -8,6 +8,8 @@ SQL is a domain-specific language used in programming and designed for managing 
 ​
 ### Mandatory Tasks
 ​
+### Mandatory Tasks
+​
 | File | Description |
 | ------ | ------ |
 | [0-list_databases.sql](0-list_databases.sql) | Write a script that lists all databases of your MySQL server. |
