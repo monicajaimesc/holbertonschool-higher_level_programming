@@ -18,47 +18,9 @@ if __name__ == "__main__":
     # it gives the ability to have multiple separete working environments through
     # the same connection to the database
     cur = db.cursor()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
-grabs all results from the cities table and prints them in asc order
-by states.id
-"""
-if __name__ == "__main__":
-    import MySQLdb
-    import sys
-
-    uname = sys.argv[1]
-    upass = sys.argv[2]
-    dbname = sys.argv[3]
-    db = MySQLdb.connect(host="localhost", port=3306, user=uname,
-                         passwd=upass, db=dbname)
-    c = db.cursor()
-    c.execute("""SELECT * from states ORDER BY states.id ASC""")
+    # the execution function requires 1 parameter, the query
+    cur.execution("SELECT * FROM states ORDER BY states.id ASC")
+    # after execute any select statement, select one method
 
     line = c.fetchone()
     while (line):
