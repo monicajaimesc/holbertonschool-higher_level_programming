@@ -12,10 +12,11 @@ if __name__ == "__main__":
 
     # connection to the database to use
     # the parameters are passed to the Python extension _mysql.
-    db = MySQLdb.connect(host='localhost', user=username,
+    db = MySQLdb.connect(host='localhost', port=3306, user=username,
                          passwd=password, db=database_name)
     # Getting a cursor in MySQL python
-    # it gives the ability to have multiple separete working environments through
+    # it gives the ability to have multiple separete
+    # working environments through
     # the same connection to the database
     cur = db.cursor()
     # the execution function requires 1 parameter, the query
