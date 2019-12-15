@@ -16,8 +16,8 @@ if __name__ == "__main__":
     # handle details of the database and DBAPI
     # Python Database API specification
     # mysql+.. refers to the MySQL for Python
-    engine = create_engine('mysql+mysqldb://@localhost/'.format
-                           (username, password, database_name))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(username, password, database_name))
 
     # The table object member of a Metadata
     # the object is available using .metadata
