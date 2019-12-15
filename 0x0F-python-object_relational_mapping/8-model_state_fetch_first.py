@@ -12,7 +12,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database_name = sys.argv[3]
     # CONNECTION
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(username, password, database_name))
     # METADATA passing in our Engine
     Base.metadata.create_all(engine)
