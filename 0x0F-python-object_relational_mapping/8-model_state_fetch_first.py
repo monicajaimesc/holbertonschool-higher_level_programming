@@ -14,14 +14,16 @@ if __name__ == "__main__":
     # CONNECTION
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(username, password, database_name))
+    # METADATA passing in our Engine
+    Base.metadata.create_all(engine)
     Session = sessionmaker()
     # The above Session is associated with SQLite-enabled Engine
     # but it hasn’t opened any connections yet
     session = Session(bind=engine)
     # CREATE FIRST NEW query object which loads the first instance of the state
-    first_query = session.query(State).first()
-    if first_query:
-        print("{}: {}".format(first_query.id, first_query.name))
+    object_query = session.query(State.id).first()
+    if object_query:
+        print("{}: {}".format(object_query.id, object_query.name))
     # If the table states is empty, print Nothing
     else:
         print("Nothing")
