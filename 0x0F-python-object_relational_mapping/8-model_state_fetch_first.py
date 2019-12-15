@@ -12,7 +12,7 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database_name = sys.argv[3]
     # CONNECTION
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+    engine = create_engine('mysql+mysqldb://{:s}:{:s}@localhost:3306/{:s}'
                            .format(username, password, database_name))
     # METADATA passing in our Engine
     Base.metadata.create_all(engine)
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session(bind=engine)
     session = Session()
     # CREATE FIRST NEW query object which loads the first instance of the state
-    first_object_query = session.query(State.id).first()
+    first_object_query = session.query(State).order_by(State.id).first()
     if first_object_query:
         print("{}: {}".format(first_object_query.id, first_object_query.name))
     # If the table states is empty, print Nothing
