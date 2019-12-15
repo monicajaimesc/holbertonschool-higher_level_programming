@@ -20,10 +20,12 @@ if __name__ == "__main__":
     # The above Session is associated with SQLite-enabled Engine
     # but it hasn’t opened any connections yet
     session = Session(bind=engine)
+    session = Session()
     # CREATE FIRST NEW query object which loads the first instance of the state
-    object_query = session.query(State.id).first()
-    if object_query:
-        print("{}: {}".format(object_query.id, object_query.name))
+    first_object_query = session.query(State.id).first()
+    if first_object_query:
+        print("{}: {}".format(first_object_query.id, first_object_query.name))
     # If the table states is empty, print Nothing
     else:
         print("Nothing")
+    session.close()
