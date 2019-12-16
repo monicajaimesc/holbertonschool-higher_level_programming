@@ -24,4 +24,4 @@ if __name__ == "__main__":
         print("Not found")
         exit
     else:
-        print("{:s}".format(state[0].id))
+        print(state.id)
