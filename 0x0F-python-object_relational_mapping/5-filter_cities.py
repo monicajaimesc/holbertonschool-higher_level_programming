@@ -22,7 +22,7 @@ if __name__ == "__main__":
                 "WHERE states.name LIKE BINARY  %(state_n)s"
                 "ORDER BY cities.id", {'state_n': state_n})
     rows = cur.fetchall()
-    list = []
+    list_to = []
     for row in rows:
-        list.append(row[0])
-    print(", ".join(list))
+        list_to.append(row[0])
+    print(", ".join(list_to))
