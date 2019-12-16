@@ -16,9 +16,13 @@ if __name__ == "__main__":
                          passwd=password, db=database_name)
     cur = db.cursor()
 
-    cur.execute("SELECT cities.name FROM cities"
-                "WHERE state_id IN (SELECT id"
-                "FROM states"
-                "WHERE name = "{:s}")".format(state_name))
-    lines = c.fetchall()
-    print(", ".join(line[0] for line in lines))
+    cur.execute("SELECT cities.name "
+                "FROM cities JOIN states "
+                "ON cities.state_id = states.id "
+                "WHERE states.name LIKE BINARY  %(state_n)s"
+                "ORDER BY cities.id", {'state_n': state_n})
+    rows = cur.fetchall()
+    list = []
+    for row in rows:
+        list.append(row[0])
+    print(", ".join(list))
