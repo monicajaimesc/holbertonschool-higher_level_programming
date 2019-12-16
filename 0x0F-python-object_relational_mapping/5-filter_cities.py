@@ -16,9 +16,9 @@ if __name__ == "__main__":
                          passwd=password, db=database_name)
     cur = db.cursor()
 
-    cur.execute("SELECT c.name FROM cities AS c "
-                "INNER JOIN states AS s ON c.state_id = s.id "
-                "WHERE s.name = %(statename)s", {'statename': state_name})
-    rows = cur.fetchall()
-    for row in rows:
-        print(", ".join(row))
+    cur.execute("SELECT cities.name FROM cities"
+                "WHERE state_id IN (SELECT id"
+                "FROM states"
+                "WHERE name = "{:s}")".format(state_name))
+    lines = c.fetchall()
+    print(", ".join(line[0] for line in lines))
