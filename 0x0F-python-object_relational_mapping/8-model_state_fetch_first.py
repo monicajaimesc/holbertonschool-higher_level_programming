@@ -16,10 +16,9 @@ if __name__ == "__main__":
                            .format(username, password, database_name))
     # METADATA passing in our Engine
     Base.metadata.create_all(engine)
-    Session = sessionmaker()
+    Session = sessionmaker(bind=engine)
     # The above Session is associated with SQLite-enabled Engine
     # but it hasn’t opened any connections yet
-    session = Session(bind=engine)
     session = Session()
     # CREATE FIRST NEW query object which loads the first instance of the state
     first_object_query = session.query(State).order_by(State.id).first()
