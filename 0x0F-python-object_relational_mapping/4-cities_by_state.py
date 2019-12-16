@@ -3,10 +3,9 @@
 lists all cities from the database
 """
 from machine.programs.objects.AirBnB_clone_v3.api.v1.views import states
-
+import MySQLdb
+import sys
 if __name__ == "__main__":
-    import MySQLdb
-    import sys
 
     username = sys.argv[1]
     password = sys.argv[2]
@@ -16,10 +15,8 @@ if __name__ == "__main__":
                          passwd=password, db=database_name)
     cur = db.cursor()
 
-    cur.execute("SELECT cities.id, cities.name, states.name "
-                "FROM cities JOIN states "
-                "ON cities.state_id = states.id "
-                "ORDER BY cities.id")
-    rows = cur.fetchall()
-    for row in rows:
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN\
+                states ON cities.state_id = states.id ORDER BY cities.id;")
+    result = cur.fetchall()
+    for row in result:
         print(row)
