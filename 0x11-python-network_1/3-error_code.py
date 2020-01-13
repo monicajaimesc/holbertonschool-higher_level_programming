@@ -10,7 +10,8 @@ if "__main__" == __name__:
 
     try:
         with urllib.request.urlopen(parameter1) as status:
-            pass
+            # when the server works
+            print(status.read().decode('utf-8'))
     # HTTP response from the server
     except HTTPError as error:
         print('Error code: {}'.format(error.code))
