@@ -8,5 +8,5 @@ if __name__ == '__main__':
 
     parameter = sys.argv[1]
     status = requests.get(parameter)
-    # get to access to a dictionary (headers is the dictionary)
+    # get access to a dictionary (headers is the dictionary)
     print(status.headers.get('X-Request-Id'))
