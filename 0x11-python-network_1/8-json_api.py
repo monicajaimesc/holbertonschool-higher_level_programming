@@ -5,6 +5,7 @@ import requests
 import sys
 
 if __name__ == '__main__':
+    # url = 'http://e9b317da67bf.19.hbtn-cod.io:5000/search_user'
     url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) == 2:
         parameter = sys.argv[1]
