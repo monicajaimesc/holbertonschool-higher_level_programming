@@ -1,12 +1,8 @@
 #!/usr/bin/node
-const a = 'Arguments found'
-const c = 'Arguments found'
-const b = 'No argument'
-
 if (process.argv[3]) {
-  console.log(a)
+  console.log('Arguments found');
 } else if (process.argv[2]) {
-  console.log(c)
+  console.log('Argument found');
 } else {
-  console.log(b)
+  console.log('No argument');
 }
