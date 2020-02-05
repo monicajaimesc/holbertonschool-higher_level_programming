@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-const ilegal_number = isNaN(process.argv[2]);
-let decimal_number = parseInt(process.argv[2]);
+const ilegalnumber = isNaN(process.argv[2]);
+const decimalnumber = parseInt(process.argv[2]);
 
-if (ilegal_number) {
+if (ilegalnumber) {
   console.log('Not a number');
 } else {
-  console.log('My number: ' + decimal_number)
+  console.log('My number: ' + decimalnumber)
 }
