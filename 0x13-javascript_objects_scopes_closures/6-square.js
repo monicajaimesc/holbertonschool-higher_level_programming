@@ -6,7 +6,10 @@ class Square extends Squarefrom {
     if (c === undefined) {
       c = 'X';
     }
-    for (let index = 0; index < this.width; index++) {
+    let index = 0;
+    while (index < this.width) {
+      index++;
+      // for (let index = 0; index < this.width; index++) {
       console.log(c.repeat(this.height));
     }
   }
