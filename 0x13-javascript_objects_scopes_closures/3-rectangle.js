@@ -6,12 +6,13 @@ class Rectangle {
       // public properties
       this.width = w;
       this.height = h;
-      // public methods
-      this.print = function () {
-        for (let i = 0; i < h; i++) {
-          console.log('X'.repeat(w));
-        }
-      }
+    }
+  }
+
+  // public methods
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
   }
 }
