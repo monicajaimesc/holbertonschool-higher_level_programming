@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// constructor will take 2 arguments
+// constructor will take two arguments
 class Rectangle {
   constructor (w, h) {
     this.width = w;
