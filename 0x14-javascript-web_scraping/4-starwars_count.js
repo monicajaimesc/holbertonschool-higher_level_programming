@@ -1,12 +1,12 @@
 #!/usr/bin/node
 const request = require('request');
 const parameter = process.argv[2];
-// const requestURL = 'http://swapi.co/api/films/';
-let numberId = 0;
+const numberId = [];
 
 function myfunction2 (character) {
   if (character.includes('18')) {
-    numberId += 1;
+    // push is like an append to the end
+    numberId.push(character);
   }
 }
 
@@ -20,6 +20,6 @@ request(parameter, function (error, response, body) {
     const jsonRequest = JSON.parse(body).results;
     // console.log(jsonRequest)
     jsonRequest.forEach(myfunction);
-    console.log(numberId);
+    console.log(numberId.length);
   }
 });
